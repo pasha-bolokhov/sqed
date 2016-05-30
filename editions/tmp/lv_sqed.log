@@ -1,0 +1,586 @@
+This is TeX, Version 3.14159 (Web2C 7.3.1) (format=latex 2005.4.4)  11 SEP 2005 23:23
+**lv_sqed.tex
+(lv_sqed.tex
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, nohyphenation, loaded.
+(/hepuser/bolokhov/LV/prop/revtex4/revtex4.cls
+Document Class: revtex4 2001/08/03 v4.0 (http://publish.aps.org/revtex4/ for do
+cumentation)
+ Copyright (c) 2001 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <ogawa@teleport.com>
+ Based on work by David Carlisle <david@dcarlisle.demon.co.uk>.
+ltxutil: portions licensed from W. E. Baxter (web@superscript.com)
+Class revtex4 Info: Repairing broken LateX \@sect on input line 596.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4 Info: Repairing broken LaTeX \@xbitor on input line 1610.
+ltxgrid: portions licensed from W. E. Baxter (web@superscript.com)
+\c@linecount=\count81
+\output=\toks14
+\@protection@box=\box27
+\@topmark@saved=\toks15
+\footins@saved=\box28
+\pagesofar=\box29
+\footbox=\box30
+\pagegrid@col=\count82
+Class revtex4 Info: Incorporating package {textcase}  [1998/11/12 v0.06 Text on
+ly upper/lower case changing (DPC)]. on input line 3682.
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+\c@affil=\count83
+\absbox=\box31
+\c@part=\count84
+\c@section=\count85
+\c@subsection=\count86
+\c@subsubsection=\count87
+\c@paragraph=\count88
+\c@subparagraph=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\c@figure=\count90
+\c@table=\count91
+
+(/usr/share/texmf/tex/latex/natbib/natbib.sty
+Package: natbib 1999/05/28 7.0 (PWD)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 508.
+\c@NAT@ctr=\count92
+)
+\widetext@top=\box32
+\widetext@bot=\box33
+
+(/hepuser/bolokhov/LV/prop/revtex4/revsymb.sty
+Package: revsymb 2001/08/03 v4.0 (http://publish.aps.org/revtex4/ for documenta
+tion)
+LaTeX Info: Redefining \REV@mathfrak on input line 118.
+))
+
+Class revtex4 Warning: No Society specified, using generic APS style.
+
+(/hepuser/bolokhov/LV/prop/revtex4/aps.rtx
+File: aps.rtx 2001/08/03 v4.0 (http://publish.aps.org/revtex4/ for documentatio
+n)
+)
+(/hepuser/bolokhov/LV/prop/revtex4/12pt.rtx
+File: 12pt.rtx 2001/08/03 v4.0 (http://publish.aps.org/revtex4/ for documentati
+on)
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+(/usr/share/texmf/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+
+(/usr/share/texmf/tex/generic/babel/english.ldf
+Language: english 2001/04/15 v3.3l English support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count93
+\U@D=\dimen106
+)
+\l@canadian = a dialect from \language\l@english 
+))
+(/usr/share/texmf/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 42.
+)
+(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\@emptytoks=\toks17
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+LaTeX Info: Redefining \frak on input line 135.
+LaTeX Info: Redefining \Bbb on input line 137.
+))
+
+LaTeX Warning: Unused global option(s):
+    [paper].
+
+(lv_sqed.aux)
+\openout1 = `lv_sqed.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+Class revtex4 Info: Patching LaTeX tabular. on input line 14.
+Class revtex4 Info: cite was not loaded (OK!) on input line 14.
+Class revtex4 Info: multicol was not loaded (OK!) on input line 14.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 33.
+ (/usr/share/texmf/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1]
+
+Package natbib Warning: Citation `Kost1' on page 2 undefined on input line 88.
+
+
+Package natbib Warning: Citation `CG' on page 2 undefined on input line 88.
+
+
+Package natbib Warning: Citation `Jacobsonreview' on page 2 undefined on input 
+line 88.
+
+
+Package natbib Warning: Citation `PhysToday' on page 2 undefined on input line 
+88.
+
+
+Package natbib Warning: Citation `DN' on page 2 undefined on input line 102.
+
+
+Package natbib Warning: Citation `lcq' on page 2 undefined on input line 107.
+
+
+Package natbib Warning: Citation `CFJ' on page 2 undefined on input line 113.
+
+
+Package natbib Warning: Citation `AmC' on page 2 undefined on input line 113.
+
+
+Package natbib Warning: Citation `Ted1' on page 2 undefined on input line 113.
+
+
+Package natbib Warning: Citation `GK' on page 2 undefined on input line 113.
+
+
+Package natbib Warning: Citation `Kost2' on page 2 undefined on input line 113.
+
+
+
+Package natbib Warning: Citation `Sarkar' on page 2 undefined on input line 113
+.
+
+
+Package natbib Warning: Citation `clock1' on page 2 undefined on input line 114
+.
+
+
+Package natbib Warning: Citation `clock2' on page 2 undefined on input line 114
+.
+
+
+Package natbib Warning: Citation `Vuc' on page 2 undefined on input line 114.
+
+
+Package natbib Warning: Citation `MP:' on page 2 undefined on input line 114.
+
+
+Package natbib Warning: Citation `Kost1' on page 2 undefined on input line 127.
+
+
+[2]
+
+Package natbib Warning: Citation `Kostelecky:1989jw' on page 3 undefined on inp
+ut line 151.
+
+
+Package natbib Warning: Citation `MP:' on page 3 undefined on input line 155.
+
+
+Package natbib Warning: Citation `MP:' on page 3 undefined on input line 171.
+
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 3 undefined on
+ input line 178.
+
+[3]
+
+Package natbib Warning: Citation `MPR1' on page 4 undefined on input line 197.
+
+
+Package natbib Warning: Citation `UCSC' on page 4 undefined on input line 200.
+
+
+Package natbib Warning: Citation `MPR2' on page 4 undefined on input line 207.
+
+
+Package natbib Warning: Citation `WMC2' on page 4 undefined on input line 212.
+
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 4 undefined on
+ input line 221.
+
+[4] [5]
+\@endnoteout=\write3
+\openout3 = `lv_sqed.end'.
+
+
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 6 undefined on
+ input line 338.
+
+
+Package natbib Warning: Citation `MP:' on page 6 undefined on input line 342.
+
+[6] [7] [8] [9]
+File: diag_chiral_A.ps Graphic file (type eps)
+ <diag_chiral_A.ps>
+File: diag_chiral_B.ps Graphic file (type eps)
+ <diag_chiral_B.ps>
+File: diag_chiral_C.ps Graphic file (type eps)
+ <diag_chiral_C.ps>
+File: diag_chiral_D.ps Graphic file (type eps)
+
+<diag_chiral_D.ps>
+File: diag_chiral_E.ps Graphic file (type eps)
+ <diag_chiral_E.ps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: diag_gauge_A.ps Graphic file (type eps)
+<diag_gauge_A.ps>
+File: diag_gauge_B.ps Graphic file (type eps)
+ <diag_gauge_B.ps>
+File: diag_gauge_C.ps Graphic file (type eps)
+ <diag_gauge_C.ps>
+File: diag_gauge_D.ps Graphic file (type eps)
+ <diag_gauge_D.ps>
+File: diag_gauge_E.ps Graphic file (type eps)
+
+<diag_gauge_E.ps>
+File: diag_gauge_F.ps Graphic file (type eps)
+ <diag_gauge_F.ps>
+File: diag_chiral_T.ps Graphic file (type eps)
+ <diag_chiral_T.ps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11] [12]
+
+Package natbib Warning: Citation `benchmark' on page 13 undefined on input line
+ 1079.
+
+[13]
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 14 undefined o
+n input line 1215.
+
+[14]
+
+Package natbib Warning: Citation `Cecotti:1987nw' on page 15 undefined on input
+ line 1281.
+
+[15]
+File: diag_chiral_SB_gauge_LV.ps Graphic file (type eps)
+ <diag_chiral_SB_gauge_LV.ps>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[16]
+File: diag_chiral_SB_chiral_LV_A.ps Graphic file (type eps)
+ <diag_chiral_SB_chiral_LV_A.ps>
+File: diag_chiral_SB_chiral_LV_B.ps Graphic file (type eps)
+ <diag_chiral_SB_chiral_LV_B.ps>
+File: diag_chiral_SB_chiral_LV_C.ps Graphic file (type eps)
+
+<diag_chiral_SB_chiral_LV_C.ps>
+File: diag_chiral_SB_chiral_LV_D.ps Graphic file (type eps)
+ <diag_chiral_SB_chiral_LV_D.ps> [17]
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 1573.
+
+[18]
+
+LaTeX Warning: Reference `' on page 19 undefined on input line 1592.
+
+
+LaTeX Warning: Reference `' on page 19 undefined on input line 1592.
+
+
+Package natbib Warning: Citation `CFJ' on page 19 undefined on input line 1640.
+
+
+
+Package natbib Warning: Citation `CG' on page 19 undefined on input line 1645.
+
+
+Package natbib Warning: Citation `Jackiw:1999yp' on page 19 undefined on input 
+line 1645.
+
+
+Package natbib Warning: Citation `Chung:1998jv' on page 19 undefined on input l
+ine 1645.
+
+
+Package natbib Warning: Citation `Andrianov:2001zj' on page 19 undefined on inp
+ut line 1645.
+
+
+Package natbib Warning: Citation `CG' on page 19 undefined on input line 1647.
+
+[19]
+
+Package natbib Warning: Citation `CG' on page 20 undefined on input line 1682.
+
+
+Package natbib Warning: Citation `Belich:' on page 20 undefined on input line 1
+685.
+
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 20 undefined o
+n input line 1685.
+
+[20]
+File: diag_gauge_SB_chiral_LV_A.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_A.ps>
+File: diag_gauge_SB_chiral_LV_B.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_B.ps>
+File: diag_gauge_SB_chiral_LV_C.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_C.ps>
+File: diag_gauge_SB_chiral_LV_D.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_D.ps>
+File: diag_gauge_SB_chiral_LV_E.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_E.ps>
+File: diag_gauge_SB_chiral_LV_A1.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_A1.ps>
+File: diag_gauge_SB_chiral_LV_B1.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_B1.ps>
+File: diag_gauge_SB_chiral_LV_C1.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_C1.ps>
+File: diag_gauge_SB_chiral_LV_D1.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_D1.ps>
+File: diag_gauge_SB_chiral_LV_E1.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_E1.ps>
+File: diag_gauge_SB_chiral_LV_F.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_F.ps>
+File: diag_gauge_SB_chiral_LV_G.ps Graphic file (type eps)
+ <diag_gauge_SB_chiral_LV_G.ps>
+File: diag_gauge_SB_chiral_LV_H.ps Graphic file (type eps)
+
+<diag_gauge_SB_chiral_LV_H.ps>
+
+Package natbib Warning: Citation `CFJ' on page 21 undefined on input line 1847.
+
+
+[21] [22]
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 23 undefined o
+n input line 2134.
+
+
+Package natbib Warning: Citation `Colladay:1998fq' on page 23 undefined on inpu
+t line 2185.
+
+[23]
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 24 undefined o
+n input line 2296.
+
+
+Package natbib Warning: Citation `Ferrara:1974wb' on page 24 undefined on input
+ line 2312.
+
+[24]
+
+Package natbib Warning: Citation `PDBook' on page 25 undefined on input line 23
+43.
+
+[25] [26]
+
+Package natbib Warning: Citation `Heckel:1999sy' on page 27 undefined on input 
+line 2527.
+
+
+Package natbib Warning: Citation `Ted1' on page 27 undefined on input line 2533
+.
+
+
+Package natbib Warning: Citation `GK' on page 27 undefined on input line 2533.
+
+
+LaTeX Warning: Reference `CFJ' on page 27 undefined on input line 2534.
+
+[27]
+
+Package natbib Warning: Citation `Gagnon:2004xh' on page 28 undefined on input 
+line 2544.
+
+
+Package natbib Warning: Citation `Kostelecky:2001mb' on page 28 undefined on in
+put line 2552.
+
+[28]
+
+Package natbib Warning: Citation `Wess:1992cp' on page 29 undefined on input li
+ne 2602.
+
+
+Package natbib Warning: Citation `Martin:1997ns' on page 29 undefined on input 
+line 2605.
+
+
+Package natbib Warning: Citation `Gates:1983nr' on page 29 undefined on input l
+ine 2607.
+
+
+Package natbib Warning: Citation `Wess:1992cp' on page 29 undefined on input li
+ne 2613.
+
+
+Package natbib Warning: Citation `Wess:1992cp' on page 29 undefined on input li
+ne 2616.
+
+
+Package natbib Warning: Citation `Martin:1997ns' on page 29 undefined on input 
+line 2673.
+
+[29]
+
+Package natbib Warning: Citation `Martin:1997ns' on page 30 undefined on input 
+line 2715.
+
+
+Package natbib Warning: Citation `Martin:1997ns' on page 30 undefined on input 
+line 2750.
+
+
+Package natbib Warning: Citation `Gates:1983nr' on page 30 undefined on input l
+ine 2783.
+
+
+Package natbib Warning: Citation `Gates:1983nr' on page 30 undefined on input l
+ine 2798.
+
+[30]
+File: tadpole1.ps Graphic file (type eps)
+ <tadpole1.ps>
+File: tadpole1.ps Graphic file (type eps)
+ <tadpole1.ps>
+File: tadpole1d.ps Graphic file (type eps)
+ <tadpole1d.ps>
+File: tadpole2.ps Graphic file (type eps)
+ <tadpole2.ps>
+File: fullprop.ps Graphic file (type eps)
+ <fullprop.ps>
+File: freeprop.ps Graphic file (type eps)
+
+<freeprop.ps>
+File: freeprop1LV.ps Graphic file (type eps)
+ <freeprop1LV.ps>
+File: freeprop2LV.ps Graphic file (type eps)
+ <freeprop2LV.ps>
+File: freeprop2LV1.ps Graphic file (type eps)
+ <freeprop2LV1.ps>
+File: freeprop1LV1.ps Graphic file (type eps)
+
+<freeprop1LV1.ps>
+File: fullprop.ps Graphic file (type eps)
+ <fullprop.ps>
+File: fulltadpole.ps Graphic file (type eps)
+ <fulltadpole.ps>
+File: fulltadpole1.ps Graphic file (type eps)
+ <fulltadpole1.ps>
+File: vertex.ps Graphic file (type eps)
+ <vertex.ps>
+File: vertex1.ps Graphic file (type eps)
+
+<vertex1.ps>
+File: fulltadpole.ps Graphic file (type eps)
+ <fulltadpole.ps>
+File: fulltadpole1.ps Graphic file (type eps)
+ <fulltadpole1.ps>
+File: tadpole.ps Graphic file (type eps)
+ <tadpole.ps>
+File: tadpole1.ps Graphic file (type eps)
+ <tadpole1.ps>
+File: tadpole1r.ps Graphic file (type eps)
+
+<tadpole1r.ps> [31]
+File: vertex1.ps Graphic file (type eps)
+ <vertex1.ps>
+File: freeprop1LV.ps Graphic file (type eps)
+ <freeprop1LV.ps>
+File: vertex1.ps Graphic file (type eps)
+ <vertex1.ps> [32] [33]
+No file lv_sqed.bbl.
+(lv_sqed.end
+
+Package natbib Warning: Citation `Wess:1992cp' on page 34 undefined on input li
+ne 1.
+
+
+Package natbib Warning: Citation `GrootNibbelink:2004za' on page 34 undefined o
+n input line 2.
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[34] (lv_sqed.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2790 strings out of 20880
+ 33536 string characters out of 197307
+ 105501 words of memory out of 350001
+ 5691 multiletter control sequences out of 10000+15000
+ 12800 words of font info for 50 fonts, out of 400000 for 1000
+ 14 hyphenation exceptions out of 10000
+ 25i,12n,24p,395b,496s stack positions out of 3000i,100n,1500p,50000b,4000s
+
+Output written on lv_sqed.dvi (34 pages, 126104 bytes).

@@ -1,0 +1,131 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 231 380 463 482
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: arrow.ps,v 1.11 2003/08/09 22:37:33 billd Exp $
+
+/tan
+  {
+  dup
+  sin exch cos div
+  } bind def
+
+/arrow_dict 12 dict def
+arrow_dict /arrow_mtrxstor matrix put
+
+/arrow
+  {
+  arrow_dict 
+    begin
+
+    /alpha exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+  
+    /arrow_oldmtrx arrow_mtrxstor currentmatrix def
+  
+    /dx x2 x1 sub def
+    /dy y2 y1 sub def
+  
+    /len dx dx mul dy dy mul add sqrt def
+    
+	 % complicated way to say theta = 90 - alpha?
+    /theta 1 alpha tan atan def
+	 % complicated way to say rad = len * sin(alpha) / (1 - sin(alpha))?
+    /rad len alpha tan mul 
+      theta sin alpha tan theta cos -1 add mul add div def
+  
+    x1 y1 translate
+    dy dx atan rotate
+  
+    len 0 M2
+    rad neg 0 rad theta 360 theta sub arcn
+    closepath
+  
+    arrow_oldmtrx setmatrix
+    end
+  } bind def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 231.237 380.299 462.663 481.901
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+355.639 445.639 M2
+344.454 450.206 341.144 446.896 345.711 435.711 C2
+350.278 424.526 346.969 421.217 335.783 425.783 C2
+324.598 430.35 321.289 427.041 325.856 415.856 C2
+330.422 404.67 327.113 401.361 315.928 405.928 C2
+304.742 410.495 301.433 407.185 306 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 403.02 M2
+317.138 407.232 317.138 411.444 306 415.656 C2
+294.862 419.868 294.862 424.08 306 428.292 C2
+317.138 432.504 317.138 436.716 306 440.928 C2
+294.862 445.14 294.862 449.352 306 453.564 C2
+317.138 457.776 317.138 461.988 306 466.2 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 M2
+311.524 406.745 308.516 410.33 296.975 406.755 C2
+285.435 403.181 282.426 406.766 287.951 417.511 C2
+293.475 428.255 290.467 431.84 278.926 428.266 C2
+267.385 424.691 264.377 428.276 269.901 439.021 C2
+275.425 449.766 272.417 453.351 260.876 449.776 C2
+ST
+NP
+3.51 SLW
+1 SLC
+235.8 396 M2
+306 396 L2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 M2
+458.1 396 L2
+ST
+1 SLW
+0 SLC
+392.931 396 401.589 396 35 arrow
+fill
+restore
+showpage
+%%EOF

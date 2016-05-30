@@ -1,0 +1,323 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 126 321 379 471
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: vertex.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/vtx_dict 20 dict def
+vtx_dict /vtx_mtrxstor matrix put
+
+/vtx_create
+  {
+  vtx_dict begin
+
+  /ang exch def
+  /rad exch def
+  /y exch def
+  /x exch def
+  /vtx_proc exch def
+
+  /vtx_oldmatrix vtx_mtrxstor currentmatrix def
+
+  x y translate
+  ang rotate
+
+  vtx_proc
+
+  vtx_oldmatrix setmatrix
+  end
+  } bind def
+
+
+/vtx_dot
+  {
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  0 setgray
+  fill
+  } bind def
+
+
+/vtx_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  0 setgray
+  fill
+  } def
+
+/vtx_open_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  1 setgray
+  gsave fill grestore
+	0 setgray
+	ST
+  } def
+
+/vtx_cross
+  {
+  NP
+  -1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  L2
+
+  -1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  L2
+
+  ST
+  } def
+
+/vtx_circlecross
+  {
+  /xshrfct .63 def
+
+    % blank out whatever is underneath
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  1 setgray
+  fill
+
+  NP
+  -1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  -1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  rad 0 M2
+  0 0 rad 0 360 arc
+
+  0 setgray
+  ST
+  } def
+
+% $Id: arrow.ps,v 1.11 2003/08/09 22:37:33 billd Exp $
+
+/tan
+  {
+  dup
+  sin exch cos div
+  } bind def
+
+/arrow_dict 12 dict def
+arrow_dict /arrow_mtrxstor matrix put
+
+/arrow
+  {
+  arrow_dict 
+    begin
+
+    /alpha exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+  
+    /arrow_oldmtrx arrow_mtrxstor currentmatrix def
+  
+    /dx x2 x1 sub def
+    /dy y2 y1 sub def
+  
+    /len dx dx mul dy dy mul add sqrt def
+    
+	 % complicated way to say theta = 90 - alpha?
+    /theta 1 alpha tan atan def
+	 % complicated way to say rad = len * sin(alpha) / (1 - sin(alpha))?
+    /rad len alpha tan mul 
+      theta sin alpha tan theta cos -1 add mul add div def
+  
+    x1 y1 translate
+    dy dx atan rotate
+  
+    len 0 M2
+    rad neg 0 rad theta 360 theta sub arcn
+    closepath
+  
+    arrow_oldmtrx setmatrix
+    end
+  } bind def
+
+% $Id: ellipse.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/ellipse_dict 6 dict def
+ellipse_dict /ellipse_mtrxstor matrix put
+
+/ellipse
+  {
+  ellipse_dict begin
+
+  /yrad exch def
+  /xrad exch def
+  /y exch def
+  /x exch def
+
+  /ellipse_oldmtrx ellipse_mtrxstor currentmatrix def
+
+  x y translate
+  xrad yrad scale
+  0 0 1 0 360 arc
+
+  ellipse_oldmtrx setmatrix
+
+  end
+  } def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 126.499 321.237 378.423 470.763
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+142.2 396 M2
+146.588 384.862 150.975 384.862 155.363 396 C2
+159.75 407.138 164.137 407.138 168.525 396 C2
+172.912 384.862 177.3 384.862 181.688 396 C2
+186.075 407.138 190.463 407.138 194.85 396 C2
+199.237 384.862 203.625 384.862 208.013 396 C2
+212.4 407.138 216.788 407.138 221.175 396 C2
+225.562 384.862 229.95 384.862 234.337 396 C2
+238.725 407.138 243.112 407.138 247.5 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 180 101.31 arcn
+ST
+NP
+0 SLW
+1 SLC
+312.786 454.5 M2
+313.254 454.5 L2
+ST
+1 SLW
+0 SLC
+304.596 454.5 313.254 454.5 35 arrow
+fill
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 78.6901 0 arcn
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 360 281.31 arcn
+ST
+NP
+0 SLW
+1 SLC
+299.214 337.5 M2
+298.746 337.5 L2
+ST
+1 SLW
+0 SLC
+307.404 337.5 298.746 337.5 35 arrow
+fill
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 258.69 180 arcn
+ST
+NP
+3.51 SLW
+1 SLC
+247.5 396 M2
+251.868 384.862 256.236 384.862 260.604 396 C2
+264.972 407.138 269.34 407.138 273.708 396 C2
+278.076 384.862 282.444 384.862 286.812 396 C2
+291.18 407.138 295.548 407.138 299.916 396 C2
+304.284 384.862 308.652 384.862 313.02 396 C2
+ST
+gsave
+NP
+306 454.5 11.7 11.7 ellipse
+clip
+NP
+grestore
+NP
+306 454.5 11.7 11.7 ellipse
+3.51 SLW
+ST
+gsave
+NP
+306 337.5 11.7 11.7 ellipse
+clip
+NP
+grestore
+NP
+306 337.5 11.7 11.7 ellipse
+3.51 SLW
+ST
+gsave
+NP
+343.44 396 9.36 9.36 ellipse
+clip
+NP
+grestore
+NP
+343.44 396 9.36 9.36 ellipse
+3.51 SLW
+ST
+3.51 SLW
+{vtx_open_box} 364.5 396 9.36 0 vtx_create
+3.51 SLW
+{vtx_open_box} 322.38 396 9.36 0 vtx_create
+restore
+showpage
+%%EOF

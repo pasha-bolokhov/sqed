@@ -1,0 +1,107 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 126 333 377 459
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: arrow.ps,v 1.11 2003/08/09 22:37:33 billd Exp $
+
+/tan
+  {
+  dup
+  sin exch cos div
+  } bind def
+
+/arrow_dict 12 dict def
+arrow_dict /arrow_mtrxstor matrix put
+
+/arrow
+  {
+  arrow_dict 
+    begin
+
+    /alpha exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+  
+    /arrow_oldmtrx arrow_mtrxstor currentmatrix def
+  
+    /dx x2 x1 sub def
+    /dy y2 y1 sub def
+  
+    /len dx dx mul dy dy mul add sqrt def
+    
+	 % complicated way to say theta = 90 - alpha?
+    /theta 1 alpha tan atan def
+	 % complicated way to say rad = len * sin(alpha) / (1 - sin(alpha))?
+    /rad len alpha tan mul 
+      theta sin alpha tan theta cos -1 add mul add div def
+  
+    x1 y1 translate
+    dy dx atan rotate
+  
+    len 0 M2
+    rad neg 0 rad theta 360 theta sub arcn
+    closepath
+  
+    arrow_oldmtrx setmatrix
+    end
+  } bind def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 126.499 333.826 376.848 458.174
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+142.2 396 M2
+146.588 384.862 150.975 384.862 155.363 396 C2
+159.75 407.138 164.137 407.138 168.525 396 C2
+172.912 384.862 177.3 384.862 181.688 396 C2
+186.075 407.138 190.463 407.138 194.85 396 C2
+199.237 384.862 203.625 384.862 208.013 396 C2
+212.4 407.138 216.788 407.138 221.175 396 C2
+225.562 384.862 229.95 384.862 234.337 396 C2
+238.725 407.138 243.112 407.138 247.5 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 180 540 arc
+ST
+1 SLW
+0 SLC
+364.34 391.675 364.34 400.325 35 arrow
+fill
+restore
+showpage
+%%EOF

@@ -1,0 +1,242 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 149 328 463 464
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: vertex.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/vtx_dict 20 dict def
+vtx_dict /vtx_mtrxstor matrix put
+
+/vtx_create
+  {
+  vtx_dict begin
+
+  /ang exch def
+  /rad exch def
+  /y exch def
+  /x exch def
+  /vtx_proc exch def
+
+  /vtx_oldmatrix vtx_mtrxstor currentmatrix def
+
+  x y translate
+  ang rotate
+
+  vtx_proc
+
+  vtx_oldmatrix setmatrix
+  end
+  } bind def
+
+
+/vtx_dot
+  {
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  0 setgray
+  fill
+  } bind def
+
+
+/vtx_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  0 setgray
+  fill
+  } def
+
+/vtx_open_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  1 setgray
+  gsave fill grestore
+	0 setgray
+	ST
+  } def
+
+/vtx_cross
+  {
+  NP
+  -1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  L2
+
+  -1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  L2
+
+  ST
+  } def
+
+/vtx_circlecross
+  {
+  /xshrfct .63 def
+
+    % blank out whatever is underneath
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  1 setgray
+  fill
+
+  NP
+  -1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  -1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  rad 0 M2
+  0 0 rad 0 360 arc
+
+  0 setgray
+  ST
+  } def
+
+% $Id: arrow.ps,v 1.11 2003/08/09 22:37:33 billd Exp $
+
+/tan
+  {
+  dup
+  sin exch cos div
+  } bind def
+
+/arrow_dict 12 dict def
+arrow_dict /arrow_mtrxstor matrix put
+
+/arrow
+  {
+  arrow_dict 
+    begin
+
+    /alpha exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+  
+    /arrow_oldmtrx arrow_mtrxstor currentmatrix def
+  
+    /dx x2 x1 sub def
+    /dy y2 y1 sub def
+  
+    /len dx dx mul dy dy mul add sqrt def
+    
+	 % complicated way to say theta = 90 - alpha?
+    /theta 1 alpha tan atan def
+	 % complicated way to say rad = len * sin(alpha) / (1 - sin(alpha))?
+    /rad len alpha tan mul 
+      theta sin alpha tan theta cos -1 add mul add div def
+  
+    x1 y1 translate
+    dy dx atan rotate
+  
+    len 0 M2
+    rad neg 0 rad theta 360 theta sub arcn
+    closepath
+  
+    arrow_oldmtrx setmatrix
+    end
+  } bind def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 149.899 328.688 462.101 463.312
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+165.6 396 M2
+170.15 384.862 174.7 384.862 179.25 396 C2
+183.8 407.138 188.35 407.138 192.9 396 C2
+197.45 384.862 202 384.862 206.55 396 C2
+211.1 407.138 215.65 407.138 220.2 396 C2
+224.75 384.862 229.3 384.862 233.85 396 C2
+238.4 407.138 242.95 407.138 247.5 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+376.2 396 M2
+380.88 384.862 385.56 384.862 390.24 396 C2
+394.92 407.138 399.6 407.138 404.28 396 C2
+408.96 384.862 413.64 384.862 418.32 396 C2
+423 407.138 427.68 407.138 432.36 396 C2
+437.04 384.862 441.72 384.862 446.4 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 180 0 arcn
+ST
+1 SLW
+0 SLC
+300.602 454.25 311.398 454.25 22 arrow
+fill
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 360 180 arcn
+ST
+1 SLW
+0 SLC
+311.398 337.75 300.602 337.75 22 arrow
+fill
+3.51 SLW
+{vtx_circlecross} 364.5 396 11.7936 0 vtx_create
+restore
+showpage
+%%EOF

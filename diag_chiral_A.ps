@@ -1,0 +1,202 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 137 379 475 504
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: vertex.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/vtx_dict 20 dict def
+vtx_dict /vtx_mtrxstor matrix put
+
+/vtx_create
+  {
+  vtx_dict begin
+
+  /ang exch def
+  /rad exch def
+  /y exch def
+  /x exch def
+  /vtx_proc exch def
+
+  /vtx_oldmatrix vtx_mtrxstor currentmatrix def
+
+  x y translate
+  ang rotate
+
+  vtx_proc
+
+  vtx_oldmatrix setmatrix
+  end
+  } bind def
+
+
+/vtx_dot
+  {
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  0 setgray
+  fill
+  } bind def
+
+
+/vtx_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  0 setgray
+  fill
+  } def
+
+/vtx_open_box
+  {
+  NP
+  rad rad M2
+  rad rad neg L2
+  rad neg rad neg L2
+  rad neg rad L2
+  closepath
+  1 setgray
+  gsave fill grestore
+	0 setgray
+	ST
+  } def
+
+/vtx_cross
+  {
+  NP
+  -1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  L2
+
+  -1 2 sqrt div rad mul
+  1 2 sqrt div rad mul
+  M2
+  1 2 sqrt div rad mul
+  -1 2 sqrt div rad mul
+  L2
+
+  ST
+  } def
+
+/vtx_circlecross
+  {
+  /xshrfct .63 def
+
+    % blank out whatever is underneath
+  NP
+  rad 0 M2
+  0 0 rad 0 360 arc
+  1 setgray
+  fill
+
+  NP
+  -1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  -1 2 sqrt div rad mul xshrfct mul
+  1 2 sqrt div rad mul xshrfct mul
+  M2
+  1 2 sqrt div rad mul xshrfct mul
+  -1 2 sqrt div rad mul xshrfct mul
+  L2
+
+  rad 0 M2
+  0 0 rad 0 360 arc
+
+  0 setgray
+  ST
+  } def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 137.637 379.643 474.363 503.879
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+142.2 396 M2
+212.4 396 L2
+ST
+NP
+3.51 SLW
+1 SLC
+212.4 396 M2
+399.6 396 L2
+ST
+NP
+3.51 SLW
+1 SLC
+399.6 396 M2
+469.8 396 L2
+ST
+NP
+3.51 SLW
+1 SLC
+212.4 396 M2
+223.632 399.924 223.912 403.838 213.533 409.83 C2
+203.154 415.822 204.214 420.693 216.144 421.832 C2
+228.074 422.971 229.445 426.648 221.175 435.321 C2
+212.905 443.994 215.294 448.369 227.061 446.101 C2
+238.829 443.832 241.181 446.974 235.689 457.626 C2
+230.197 468.278 233.722 471.803 244.374 466.311 C2
+255.026 460.819 258.168 463.171 255.899 474.939 C2
+253.631 486.706 258.006 489.095 266.679 480.825 C2
+275.352 472.555 279.029 473.926 280.168 485.856 C2
+281.307 497.786 286.178 498.846 292.17 488.467 C2
+298.162 478.088 302.076 478.368 306.53 489.494 C2
+310.984 500.62 315.956 500.264 318.781 488.618 C2
+321.606 476.971 325.441 476.137 332.849 485.558 C2
+340.257 494.978 344.927 493.236 344.357 481.265 C2
+343.786 469.295 347.231 467.414 356.993 474.366 C2
+366.754 481.317 370.745 478.33 366.825 467.005 C2
+362.905 455.68 365.68 452.905 377.005 456.825 C2
+388.33 460.745 391.317 456.754 384.366 446.993 C2
+377.414 437.231 379.295 433.786 391.265 434.357 C2
+403.236 434.927 404.978 430.257 395.558 422.849 C2
+386.137 415.441 386.971 411.606 398.618 408.781 C2
+410.264 405.956 410.62 400.984 399.6 396 C2
+ST
+3.51 SLW
+{vtx_circlecross} 306 396 11.7936 0 vtx_create
+restore
+showpage
+%%EOF

@@ -1,0 +1,14 @@
+#
+#
+#
+
+  for i in "gauge_LV" \
+	"chiral_LV_A" "chiral_LV_B" \
+	"chiral_LV_C" "chiral_LV_D"; do
+     echo "Preparing diagram \"$i\""
+
+    ./compile diag_chiral_SB_${i}.C -o diag_chiral_SB_${i}.bin
+    ./diag_chiral_SB_${i}.bin > diag_chiral_SB_${i}.ps
+  done
+
+

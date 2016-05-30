@@ -1,0 +1,162 @@
+%!
+%%Creator: FeynDiagram $Revision: 2.6 $  by Bill Dimm
+%%BoundingBox: 126 333 381 459
+%%LanguageLevel: 1
+%%Pages: 1
+%%EndComments
+%%BeginProlog
+% $Id: abbrev.ps,v 1.11 2000/04/18 19:16:07 billd Exp $
+
+/CP /charpath load def
+/CF /currentflat load def
+/CPT /currentpoint load def
+/C2 /curveto load def
+/RC2 /rcurveto load def
+/FP /flattenpath load def
+/L2 /lineto load def
+/M2 /moveto load def
+/NP /newpath load def
+/PBX /pathbbox load def
+/RM2 /rmoveto load def
+/SD /setdash load def
+/SLC /setlinecap load def
+/SLW /setlinewidth load def
+/S /show load def
+/ST /stroke load def
+
+% $Id: max.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/max { 2 copy lt {exch} if pop } bind def
+
+% $Id: arrow.ps,v 1.11 2003/08/09 22:37:33 billd Exp $
+
+/tan
+  {
+  dup
+  sin exch cos div
+  } bind def
+
+/arrow_dict 12 dict def
+arrow_dict /arrow_mtrxstor matrix put
+
+/arrow
+  {
+  arrow_dict 
+    begin
+
+    /alpha exch def
+    /y2 exch def
+    /x2 exch def
+    /y1 exch def
+    /x1 exch def
+  
+    /arrow_oldmtrx arrow_mtrxstor currentmatrix def
+  
+    /dx x2 x1 sub def
+    /dy y2 y1 sub def
+  
+    /len dx dx mul dy dy mul add sqrt def
+    
+	 % complicated way to say theta = 90 - alpha?
+    /theta 1 alpha tan atan def
+	 % complicated way to say rad = len * sin(alpha) / (1 - sin(alpha))?
+    /rad len alpha tan mul 
+      theta sin alpha tan theta cos -1 add mul add div def
+  
+    x1 y1 translate
+    dy dx atan rotate
+  
+    len 0 M2
+    rad neg 0 rad theta 360 theta sub arcn
+    closepath
+  
+    arrow_oldmtrx setmatrix
+    end
+  } bind def
+
+% $Id: ellipse.ps,v 1.10 2000/04/18 19:16:07 billd Exp $
+
+/ellipse_dict 6 dict def
+ellipse_dict /ellipse_mtrxstor matrix put
+
+/ellipse
+  {
+  ellipse_dict begin
+
+  /yrad exch def
+  /xrad exch def
+  /y exch def
+  /x exch def
+
+  /ellipse_oldmtrx ellipse_mtrxstor currentmatrix def
+
+  x y translate
+  xrad yrad scale
+  0 0 1 0 360 arc
+
+  ellipse_oldmtrx setmatrix
+
+  end
+  } def
+
+%%EndProlog
+%%Page: 1 1
+%%PageBoundingBox: 126.499 333.622 380.763 458.378
+%%PageOrientation: Portrait
+save
+
+NP
+3.51 SLW
+1 SLC
+142.2 396 M2
+146.657 384.862 151.114 384.862 155.571 396 C2
+160.029 407.138 164.486 407.138 168.943 396 C2
+173.4 384.862 177.857 384.862 182.314 396 C2
+186.771 407.138 191.229 407.138 195.686 396 C2
+200.143 384.862 204.6 384.862 209.057 396 C2
+213.514 407.138 217.971 407.138 222.429 396 C2
+226.886 384.862 231.343 384.862 235.8 396 C2
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 169 11 arcn
+ST
+NP
+3.51 SLW
+1 SLC
+306 396 58.5 349 191 arcn
+ST
+NP
+0 SLW
+1 SLC
+364.5 402.786 M2
+364.5 403.254 L2
+ST
+1 SLW
+0 SLC
+364.5 394.596 364.5 403.254 35 arrow
+fill
+gsave
+NP
+247.5 396 11.7 11.7 ellipse
+clip
+NP
+grestore
+NP
+247.5 396 11.7 11.7 ellipse
+3.51 SLW
+ST
+gsave
+NP
+364.5 396 11.7 11.7 ellipse
+clip
+NP
+grestore
+NP
+364.5 396 11.7 11.7 ellipse
+3.51 SLW
+ST
+restore
+showpage
+%%EOF

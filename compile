@@ -1,0 +1,4 @@
+#
+
+c++ "$@" -I$HOME/FeynDiagram/include -L$HOME/FeynDiagram/lib -lFD
+

@@ -1,0 +1,19 @@
+#
+#
+#
+
+# some clean-up first
+#  rm -f lv_sqed.dvi
+#  rm -f feynmanpics.*
+
+#  latex lv_sqed.tex 
+
+#  DISPLAY= mf feynmanpics.mf 
+
+#  latex lv_sqed.tex
+
+# temporary comment out bibtex;  restore it later!!
+#  latex lv_sqed.tex && bibtex lv_sqed &&
+  export TEXINPUTS=${TEXINPUTS}:$HOME/LV/prop/revtex4
+  latex lv_sqed.tex && latex lv_sqed.tex && dvips -o lv_sqed.ps lv_sqed.dvi
+

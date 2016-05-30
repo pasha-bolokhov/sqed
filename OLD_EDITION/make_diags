@@ -1,0 +1,19 @@
+#
+#
+#
+
+  for i in A B C D E; do
+     echo "Preparing diagram \"$i\""
+
+    ./compile diag_${i}.C -o diag_${i}.bin
+    ./diag_${i}.bin > diag_${i}.ps
+  done
+
+
+  for i in A B C D E F; do
+     echo "Preparing diagram \"gauge_$i\""
+
+    ./compile diag_gauge_${i}.C -o diag_gauge_${i}.bin
+    ./diag_gauge_${i}.bin > diag_gauge_${i}.ps
+  done
+

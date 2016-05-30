@@ -1,0 +1,12 @@
+#
+#
+#
+
+  for i in A B C D E T; do
+     echo "Preparing diagram \"$i\""
+
+    ./compile diag_${i}.C -o diag_${i}.bin
+    ./diag_${i}.bin > diag_${i}.ps
+  done
+
+
